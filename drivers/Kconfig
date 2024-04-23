@@ -1,0 +1,1 @@
+rsource "led_strip/gpio_rgb/Kconfig"
