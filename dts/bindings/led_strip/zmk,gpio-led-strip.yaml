@@ -1,0 +1,20 @@
+# Copyrish
+
+description: |
+  LED-strip driver using GPIO pins to drive R G and B, note there is no dimming with this driver
+
+compatible: "zmk,gpio-led-strip"
+
+properties:
+  chain-length:
+    type: int
+    required: true
+    description: |
+      The number of devices in the daisy-chain.
+  
+child-binding:
+  description: "Details of included led devices, it is expected each one will have 3 subdevices for r g and b in order"
+  properties:
+    led:
+      type: phandle
+      required: true

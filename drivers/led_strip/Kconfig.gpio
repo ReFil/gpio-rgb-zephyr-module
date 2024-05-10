@@ -1,0 +1,16 @@
+# Copyright (c) 2024 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+DT_COMPAT_ZMK_GPIO_LED_STRIP := zmk,gpio-led-strip
+
+config GPIO_LED_STRIP
+    bool "GPIO RGB LED Strip Driver"
+    default $(dt_compat_enabled,$(DT_COMPAT_ZMK_LED_STRIP_COMPOSITE))
+    depends on GPIO
+    select LED_STRIP
+    help
+      Enable driver for GPIO RGB LED strips
+
+config GPIO_LED_STRIP_INIT_PRIORITY
+	int "Init priority for composite LED_Strip driver"
+	default 91

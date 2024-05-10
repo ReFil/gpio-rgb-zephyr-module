@@ -1,1 +1,1 @@
-rsource "led_strip/gpio_rgb/Kconfig"
+rsource "led_strip/Kconfig"

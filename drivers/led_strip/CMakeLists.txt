@@ -1,0 +1,1 @@
+zephyr_sources_ifdef(CONFIG_GPIO_LED_STRIP gpio_led_strip.c)
